@@ -41,28 +41,6 @@ importers:
         specifier: ^5.2.8
         version: 5.3.1(@types/node@20.14.2)(terser@5.31.1)
 
-  sandbox-2:
-    dependencies:
-      vue:
-        specifier: ^3.4.21
-        version: 3.4.29(typescript@4.7.4)
-      vue-router:
-        specifier: ^4.3.0
-        version: 4.3.3(vue@3.4.29(typescript@4.7.4))
-      vue2-compiled:
-        specifier: workspace:*
-        version: link:../vue2-compiled
-      vue3-compiled:
-        specifier: workspace:*
-        version: link:../vue3-compiled
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.0.4
-        version: 5.0.5(vite@5.3.1(@types/node@20.14.2)(terser@5.31.1))(vue@3.4.29(typescript@4.7.4))
-      vite:
-        specifier: ^5.2.8
-        version: 5.3.1(@types/node@20.14.2)(terser@5.31.1)
-
   vue2-compiled:
     dependencies:
       vue:
