@@ -1,0 +1,5 @@
+packages:
+  - sandbox
+  - vue2-compiled
+  - vue3-compiled
+  - sandbox-2
