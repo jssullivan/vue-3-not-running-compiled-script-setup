@@ -14,5 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "@vue/compat": "3.4"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@vue/compat@3.4.29": "patches/@vue__compat@3.4.29.patch"
+    }
   }
 }

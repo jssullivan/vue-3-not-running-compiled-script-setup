@@ -1,7 +1,7 @@
 import { createApp, configureCompat } from 'vue'
 import App from './App.vue'
 import router from './router'
-configureCompat({ MODE: 2, RENDER_FUNCTION: false })
+configureCompat({ MODE: 2, RENDER_FUNCTION: true })
 
 const app = createApp(App)
 

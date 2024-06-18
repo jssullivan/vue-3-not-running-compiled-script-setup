@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@vue/compat@3.4.29':
+    hash: az4ircmvotpp7tjhqay54zxeua
+    path: patches/@vue__compat@3.4.29.patch
+
 importers:
 
   .:
     dependencies:
       '@vue/compat':
         specifier: '3.4'
-        version: 3.4.29(vue@3.4.29(typescript@4.7.4))
+        version: 3.4.29(patch_hash=az4ircmvotpp7tjhqay54zxeua)(vue@3.4.29(typescript@4.7.4))
     devDependencies:
       vite:
         specifier: ^5.2.8
@@ -20,7 +25,7 @@ importers:
     dependencies:
       '@vue/compat':
         specifier: ^3.4.29
-        version: 3.4.29(vue@3.4.29(typescript@4.7.4))
+        version: 3.4.29(patch_hash=az4ircmvotpp7tjhqay54zxeua)(vue@3.4.29(typescript@4.7.4))
       vue:
         specifier: ^3.4.29
         version: 3.4.29(typescript@4.7.4)
@@ -1042,7 +1047,7 @@ snapshots:
       vite: 5.3.1(@types/node@20.14.2)(terser@5.31.1)
       vue: 3.4.29(typescript@4.7.4)
 
-  '@vue/compat@3.4.29(vue@3.4.29(typescript@4.7.4))':
+  '@vue/compat@3.4.29(patch_hash=az4ircmvotpp7tjhqay54zxeua)(vue@3.4.29(typescript@4.7.4))':
     dependencies:
       '@babel/parser': 7.24.7
       estree-walker: 2.0.2

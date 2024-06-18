@@ -1,0 +1,112 @@
+diff --git a/dist/vue.cjs.js b/dist/vue.cjs.js
+index 8568defbab08f2079ed980d3878ff3ae4293cbf3..1e5bf21d7cfb51b92f9e57a0b714fbf94ad3d831 100644
+--- a/dist/vue.cjs.js
++++ b/dist/vue.cjs.js
+@@ -4128,7 +4128,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled$1("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.cjs.prod.js b/dist/vue.cjs.prod.js
+index 155674b4a625fc61b681222895d95ae555b3dfa5..12d9a1c883927953803703cf2c93e7eba3f072f7 100644
+--- a/dist/vue.cjs.prod.js
++++ b/dist/vue.cjs.prod.js
+@@ -3116,7 +3116,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled$1("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.esm-browser.js b/dist/vue.esm-browser.js
+index ceb1a921e2e28aeac85dbff64f9e794b9b330585..4bf6ea98b71469d96c9437bcd2f5965efee57671 100644
+--- a/dist/vue.esm-browser.js
++++ b/dist/vue.esm-browser.js
+@@ -4077,7 +4077,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled$1("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.esm-bundler.js b/dist/vue.esm-bundler.js
+index 3b7939001d60b25dc341c5bf8f493deac3f62336..f2261dac715c0b1ed6c66f16cecce8e2252a5b76 100644
+--- a/dist/vue.esm-bundler.js
++++ b/dist/vue.esm-bundler.js
+@@ -4083,7 +4083,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled$1("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.global.js b/dist/vue.global.js
+index 1b114a032e1a3c60153187855f71237e5139d54a..f4bfe224125600009d4836e07e8a423346db23a9 100644
+--- a/dist/vue.global.js
++++ b/dist/vue.global.js
+@@ -4080,7 +4080,8 @@ If this is a native custom element, make sure to exclude it from component resol
+     }
+     if (checkCompatEnabled$1("RENDER_FUNCTION", instance)) {
+       const wrapped = Component.render = function compatRender() {
+-        return render.call(this, compatH);
++        this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+       };
+       wrapped._compatWrapped = true;
+     }
+diff --git a/dist/vue.runtime.esm-browser.js b/dist/vue.runtime.esm-browser.js
+index 46426af551dbe938f850d2d91ffdacd8094dfa2b..fd2a2288715edb24597a4478d4e9c6d40c304804 100644
+--- a/dist/vue.runtime.esm-browser.js
++++ b/dist/vue.runtime.esm-browser.js
+@@ -4010,7 +4010,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.runtime.esm-bundler.js b/dist/vue.runtime.esm-bundler.js
+index e0a97a47d2736b931e13259dd58d278f512c3cb0..db2da0602b50ad7537c28ca2857ec7033a4d3d8e 100644
+--- a/dist/vue.runtime.esm-bundler.js
++++ b/dist/vue.runtime.esm-bundler.js
+@@ -4016,7 +4016,8 @@ function convertLegacyRenderFn(instance) {
+   }
+   if (checkCompatEnabled("RENDER_FUNCTION", instance)) {
+     const wrapped = Component.render = function compatRender() {
+-      return render.call(this, compatH);
++      this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+     };
+     wrapped._compatWrapped = true;
+   }
+diff --git a/dist/vue.runtime.global.js b/dist/vue.runtime.global.js
+index 5e1755264a6aaa662fc3fdfc5a51b5d8ef94a7f4..3b985f6d9fb2aa4c1e8f24888e76fc9a58cf338d 100644
+--- a/dist/vue.runtime.global.js
++++ b/dist/vue.runtime.global.js
+@@ -4013,7 +4013,8 @@ If this is a native custom element, make sure to exclude it from component resol
+     }
+     if (checkCompatEnabled("RENDER_FUNCTION", instance)) {
+       const wrapped = Component.render = function compatRender() {
+-        return render.call(this, compatH);
++        this._self._setupProxy = this._self; 
++        return render.call(this, compatH); 
+       };
+       wrapped._compatWrapped = true;
+     }
